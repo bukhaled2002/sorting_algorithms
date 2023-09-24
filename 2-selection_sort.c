@@ -28,7 +28,7 @@ void selection_sort(int *array, size_t size)
 
 	if (array == NULL || size < 2)
 		return;
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size - 1; i++)
 	{
 	smallest_indx = i;
 	for (j = i + 1; j < size; j++)
@@ -36,7 +36,10 @@ void selection_sort(int *array, size_t size)
 		if (array[j] < array[smallest_indx])
 			smallest_indx = j;
 	}
-	swap(&array[i], &array[smallest_indx]);
-	print_array(array, size);
+	if (array[i] != array[smallest_indx])
+	{
+		swap(&array[i], &array[smallest_indx]);
+		print_array(array, size);
+	}
 	}
 }
