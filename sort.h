@@ -8,6 +8,7 @@
 #define UP 0
 #define DOWN 1
 
+
 /**
  * enum bool - Enumeration of Boolean values.
  * @false: Equals 0.
