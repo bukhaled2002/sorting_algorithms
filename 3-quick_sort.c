@@ -35,7 +35,7 @@ int partion(int *array, size_t size, int low, int high)
 		{
 			if (i < j)
 			{
-				swap(&array[j], &array[i]);	
+				swap(&array[j], &array[i]);
 				print_array(array, size);
 			}
 			i++;
@@ -66,7 +66,7 @@ void recursion_sort(int *array, size_t size, int low, int high)
 	if (low < high)
 	{
 	int pivot = partion(array, size, low, high);
-	
+
 	recursion_sort(array, size, low, pivot - 1);
 	recursion_sort(array, size, pivot + 1, high);
 	}
